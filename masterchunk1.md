@@ -291,6 +291,8 @@ GPL 플러그인을 추가로 포함하는 `VideoLAN.LibVLC.Windows.GPL` 패키�
 
 ## 8. 라이브러리 라이선스 고지
 
+ND Explorer 자체 소스 코드에는 `Apache-2.0`을 적용한다. 저장소 루트의 `LICENSE`에는 Apache License 2.0 전문을, `NOTICE`에는 프로젝트 저작권 및 외부 구성요소 귀속 고지를 둔다. 아래 LGPL 조건은 ND Explorer의 Apache 2.0 라이선스와 별개로 해당 외부 라이브러리에 계속 적용된다.
+
 메인 창 상단의 `라이브러리 라이센스 고지` 버튼으로 고지 창을 연다.
 
 고지 창에는 다음 내용이 포함된다.

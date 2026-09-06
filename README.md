@@ -65,7 +65,11 @@ ND_Explorer\bin\Release\net9.0-windows\ND_Explorer.exe
 - LibVLCSharp.WPF 3.10.1
 - VideoLAN.LibVLC.Windows 3.0.23.1
 
-## 오픈소스 고지
+## 라이선스
+
+ND Explorer 자체 소스 코드는 [Apache License 2.0](LICENSE)으로 배포됩니다. 저작권 및 귀속 고지는 [NOTICE](NOTICE)를 참고하세요.
+
+### 외부 구성요소
 
 동영상 재생에는 VideoLAN 및 LibVLCSharp 기여자들이 개발한 LGPL 2.1 이상 라이선스 구성요소를 사용합니다. GPL 플러그인이 추가된 `VideoLAN.LibVLC.Windows.GPL` 패키지는 포함하지 않습니다.
 
@@ -73,5 +77,3 @@ ND_Explorer\bin\Release\net9.0-windows\ND_Explorer.exe
 
 - [Third-party notices](ND_Explorer/Licenses/THIRD-PARTY-NOTICES.txt)
 - [GNU LGPL 2.1 전문](ND_Explorer/Licenses/LGPL-2.1.txt)
-
-이 프로젝트 자체의 라이선스는 아직 별도로 지정하지 않았습니다.
