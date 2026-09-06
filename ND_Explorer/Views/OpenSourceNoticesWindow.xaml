@@ -1,0 +1,68 @@
+<Window x:Class="ND_Explorer.Views.OpenSourceNoticesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="오픈소스 라이선스"
+        Width="720" Height="640" MinWidth="600" MinHeight="460"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Foreground="{DynamicResource PrimaryTextBrush}"
+        WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Margin="0,0,0,18">
+            <TextBlock Text="오픈소스 소프트웨어 고지" FontSize="22" FontWeight="SemiBold" />
+            <TextBlock Text="ND Explorer에 포함된 주요 외부 구성요소와 배포 조건입니다."
+                       Foreground="{DynamicResource SecondaryTextBrush}" Margin="0,6,0,0" />
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <Border Style="{StaticResource NoticeCardStyle}">
+                    <StackPanel>
+                        <TextBlock Text="LibVLCSharp.WPF 3.10.1" FontSize="16" FontWeight="SemiBold" />
+                        <TextBlock Text="저작자/관리자: VideoLAN 및 LibVLCSharp 기여자" Margin="0,7,0,0" />
+                        <TextBlock Text="라이선스: GNU Lesser General Public License v2.1 or later"
+                                   Foreground="{DynamicResource AccentBrush}" Margin="0,4,0,0" />
+                        <TextBlock Text="WPF 애플리케이션과 libVLC를 연결하고 영상 화면을 제공하는 .NET 바인딩입니다."
+                                   TextWrapping="Wrap" Margin="0,8,0,0" />
+                        <Button Content="LibVLCSharp 소스 열기" HorizontalAlignment="Left" Margin="0,10,0,0"
+                                Click="OpenLibVlcSharpSource_OnClick" />
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource NoticeCardStyle}">
+                    <StackPanel>
+                        <TextBlock Text="VideoLAN.LibVLC.Windows 3.0.23.1" FontSize="16" FontWeight="SemiBold" />
+                        <TextBlock Text="저작자/관리자: VideoLAN 및 VLC 기여자" Margin="0,7,0,0" />
+                        <TextBlock Text="라이선스: GNU Lesser General Public License v2.1 or later"
+                                   Foreground="{DynamicResource AccentBrush}" Margin="0,4,0,0" />
+                        <TextBlock Text="영상·음성 디코딩과 재생을 담당하는 Windows용 네이티브 libVLC 배포본입니다. GPL 플러그인 패키지는 포함하지 않습니다."
+                                   TextWrapping="Wrap" Margin="0,8,0,0" />
+                        <Button Content="VLC/libVLC 소스 열기" HorizontalAlignment="Left" Margin="0,10,0,0"
+                                Click="OpenLibVlcSource_OnClick" />
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource NoticeCardStyle}">
+                    <StackPanel>
+                        <TextBlock Text="LGPL 배포 조건 요약" FontSize="16" FontWeight="SemiBold" />
+                        <TextBlock Margin="0,8,0,0" TextWrapping="Wrap"
+                                   Text="• 사용 사실과 저작권 및 라이선스를 고지합니다.&#x0a;• 해당 라이브러리의 소스 코드를 받을 수 있게 합니다.&#x0a;• 수정된 라이브러리를 배포하면 그 수정 소스를 같은 조건으로 제공합니다.&#x0a;• 사용자가 호환되는 수정 DLL로 교체할 수 있게 동적 링크 형태를 유지합니다.&#x0a;• LGPL 구성요소의 수정 사항을 디버깅하기 위한 역공학을 금지하지 않습니다." />
+                        <Button Content="LGPL 2.1 라이선스 전문 열기" HorizontalAlignment="Left" Margin="0,10,0,0"
+                                Click="OpenLgplLicense_OnClick" />
+                    </StackPanel>
+                </Border>
+
+                <TextBlock Text="이 화면은 라이선스 조건을 이해하기 위한 요약이며 법률 자문을 대신하지 않습니다."
+                           Foreground="{DynamicResource SecondaryTextBrush}" TextWrapping="Wrap" Margin="4,8,4,16" />
+            </StackPanel>
+        </ScrollViewer>
+
+        <Button Grid.Row="2" Content="닫기" Width="90" HorizontalAlignment="Right" Margin="0,16,0,0"
+                IsCancel="True" />
+    </Grid>
+</Window>

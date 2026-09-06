@@ -1,0 +1,21 @@
+# Visual Studio and user-specific files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET build output
+**/bin/
+**/obj/
+artifacts/
+TestResults/
+
+# Local smoke-test output
+.smoke/
+storage_smoke/
+
+# OS-generated files
+Thumbs.db
+Desktop.ini
+.DS_Store

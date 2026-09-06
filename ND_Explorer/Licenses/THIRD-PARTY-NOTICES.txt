@@ -1,0 +1,24 @@
+ND Explorer - Third-Party Software Notices
+==========================================
+
+This application dynamically links to the following unmodified libraries.
+ND Explorer itself is a separate work and is not licensed by this notice.
+
+1. LibVLCSharp.WPF 3.10.1
+   Authors: VideoLAN and LibVLCSharp contributors
+   License: GNU Lesser General Public License v2.1 or later
+   Package: https://www.nuget.org/packages/LibVLCSharp.WPF/3.10.1
+   Source:  https://code.videolan.org/videolan/LibVLCSharp/-/tree/4896d0e06d19ac40b46802cf7dc167d432f3fd63
+
+2. VideoLAN.LibVLC.Windows 3.0.23.1
+   Authors: VideoLAN and VLC contributors
+   License: GNU Lesser General Public License v2.1 or later
+   Package: https://www.nuget.org/packages/VideoLAN.LibVLC.Windows/3.0.23.1
+   VLC 3.0.23 source: https://download.videolan.org/pub/videolan/vlc/3.0.23/vlc-3.0.23.tar.xz
+   Packaging source: https://code.videolan.org/videolan/libvlc-nuget
+
+A complete copy of the GNU LGPL v2.1 is distributed beside this notice as
+LGPL-2.1.txt. These libraries are provided without warranty. Recipients may
+replace the dynamically linked libraries with interface-compatible modified
+versions. ND Explorer does not include the separately published
+VideoLAN.LibVLC.Windows.GPL package.

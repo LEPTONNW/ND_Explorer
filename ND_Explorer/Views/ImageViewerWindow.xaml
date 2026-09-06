@@ -1,0 +1,67 @@
+<Window x:Class="ND_Explorer.Views.ImageViewerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="이미지 뷰어"
+        Width="1100" Height="760" MinWidth="640" MinHeight="420"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Foreground="{DynamicResource PrimaryTextBrush}"
+        WindowStartupLocation="CenterOwner"
+        SizeChanged="Window_OnSizeChanged"
+        PreviewKeyDown="Window_OnPreviewKeyDown">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="46" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="28" />
+        </Grid.RowDefinitions>
+
+        <Border Background="{DynamicResource PanelBackgroundBrush}"
+                BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,0,0,1" Padding="10,6">
+            <DockPanel>
+                <TextBlock x:Name="FileNameText" FontWeight="SemiBold" TextTrimming="CharacterEllipsis"
+                           VerticalAlignment="Center" Margin="8,0,20,0" />
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+                    <Button Content="축소" ToolTip="축소 (-)" Click="ZoomOut_OnClick" />
+                    <Button Content="확대" ToolTip="확대 (+)" Click="ZoomIn_OnClick" />
+                    <Button Content="화면 맞춤" ToolTip="화면에 맞춤 (Ctrl+0)" Click="Fit_OnClick" />
+                    <Button Content="왼쪽 회전" Click="RotateLeft_OnClick" />
+                    <Button Content="오른쪽 회전" Click="RotateRight_OnClick" />
+                    <Button Content="전체화면" ToolTip="전체화면 (F11)" Click="Fullscreen_OnClick" />
+                    <Button Content="최소화" Click="Minimize_OnClick" />
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <ScrollViewer x:Name="Viewer" Grid.Row="1"
+                      HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                      Background="#090A0D"
+                      PreviewMouseWheel="Viewer_OnMouseWheel"
+                      PreviewMouseMove="Viewer_OnPreviewMouseMove"
+                      PreviewMouseLeftButtonUp="Viewer_OnPreviewMouseLeftButtonUp"
+                      LostMouseCapture="Viewer_OnLostMouseCapture">
+            <Grid MinWidth="200" MinHeight="200"
+                  PreviewMouseLeftButtonDown="Viewer_OnPreviewMouseLeftButtonDown">
+                <Image x:Name="DisplayedImage"
+                       Stretch="None"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       MouseLeftButtonDown="Image_OnMouseLeftButtonDown">
+                    <Image.LayoutTransform>
+                        <TransformGroup>
+                            <ScaleTransform x:Name="ImageScale" ScaleX="1" ScaleY="1" />
+                            <RotateTransform x:Name="ImageRotation" Angle="0" />
+                        </TransformGroup>
+                    </Image.LayoutTransform>
+                </Image>
+            </Grid>
+        </ScrollViewer>
+
+        <Border Grid.Row="2" Background="{DynamicResource PanelBackgroundBrush}"
+                BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,1,0,0" Padding="12,0">
+            <Grid>
+                <TextBlock x:Name="ImageInfoText" Foreground="{DynamicResource SecondaryTextBrush}" FontSize="11" />
+                <TextBlock x:Name="ZoomText" HorizontalAlignment="Right"
+                           Foreground="{DynamicResource SecondaryTextBrush}" FontSize="11" />
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
