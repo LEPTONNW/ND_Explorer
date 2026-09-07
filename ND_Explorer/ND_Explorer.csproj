@@ -7,6 +7,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>ND_Explorer.ico</ApplicationIcon>
     <PlatformTarget>x64</PlatformTarget>
     <Authors>LEPTONNW</Authors>
     <Copyright>Copyright 2026 LEPTONNW</Copyright>
